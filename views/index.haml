@@ -2,49 +2,57 @@
 %html
   %head
     %title #{data['name']}
+    %link{rel: "shortcut icon", href: "/favicon.ico" }
+    %link{href: "/bootstrap/css/bootstrap.css", rel: "stylesheet"}
+    %link{href: "/bootstrap/css/bootstrap-responsive.css", rel: "stylesheet"}
+    %link{href: "/css/resume.css", rel: "stylesheet"}
   %body
-    %h1 #{data['name']}
-    %h3 #{data['title']}
-    %a{href: data['download']} 
-      = "Download resume"
-    %ul
-      %li 
-        %a{:href => "mailto:#{data['contact']['email']}"}
-          = data['contact']['email']
-      %li 
-        %a{:href => "https://twitter.com/#{data['contact']['twitter']}"} @#{data['contact']['twitter']}
-      %li 
-        %a{:href => "https://github.com/#{data['contact']['github']}"} Github
-      %li 
-        %a{:href => "https://www.linkedin.com/in/#{data['contact']['linkedin']}"} LinkedIn
+    %div
+      %h1.name #{data['name'].upcase}
+      %h3.title #{data['title'].upcase}
+      %a.download{href: data['download']} 
+        = "Download resume"
 
-    %h3 EXPERIENCE
-    %ul
-      - data['experience'].each do |s|
-        %li
-          = s['company']
-          = s['title']
-          = s['from']
-          = s['to']
-          = s['desc']
+      .contact
+        %ul
+          %li 
+            %a{:href => "mailto:#{data['contact']['email']}"}
+              = data['contact']['email']
+          %li 
+            %a{:href => "https://twitter.com/#{data['contact']['twitter']}"} @#{data['contact']['twitter']}
+          %li 
+            %a{:href => "https://github.com/#{data['contact']['github']}"} Github
+          %li 
+            %a{:href => "https://www.linkedin.com/in/#{data['contact']['linkedin']}"} LinkedIn
 
-    %h3 EDUCATION
-    %ul
-      - data['education'].each do |s|
-        %li
-          = s['school']
-          - s['degree'].each do |d|
-            = d
-          = s['from']
-          = s['to']
+      .exp
+        %h3.title EXPERIENCE
+        %ul
+          - data['experience'].each do |s|
+            %li
+              %h4.title #{s['title']}: #{s['company']}
+              %span #{s['from']} to #{s['to']}
+              %p
+                =s['desc']
 
-    %h3 SKILLS
-    %ul
-      - data['skills'].each do |s|
-        %li
-          - s.each do |k,v|
-            %span #{k.capitalize}: 
-            %ul
-              - v.each do |i|
-                %li #{i}
+      .edu
+        %h3.title EDUCATION
+        %ul
+          - data['education'].each do |s|
+            %li
+              %h4.title #{s['school']}
+              %span #{s['from']} to #{s['to']}
+              %p 
+                = s['degree'].join(', ')
+
+      .skills
+        %h3.title SKILLS
+        %ul
+          - data['skills'].each do |s|
+            %li
+              - s.each do |k,v|
+                %span.category #{k.capitalize}: 
+                = v.join(', ')
+
+    %script{src: "/bootstrap/js/bootstrap.js", language:"javascript"}
 
