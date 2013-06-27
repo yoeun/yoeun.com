@@ -1,0 +1,50 @@
+!!! 5
+%html
+  %head
+    %title #{data['name']}
+  %body
+    %h1 #{data['name']}
+    %h3 #{data['title']}
+    %a{href: data['download']} 
+      = "Download resume"
+    %ul
+      %li 
+        %a{:href => "mailto:#{data['contact']['email']}"}
+          = data['contact']['email']
+      %li 
+        %a{:href => "https://twitter.com/#{data['contact']['twitter']}"} @#{data['contact']['twitter']}
+      %li 
+        %a{:href => "https://github.com/#{data['contact']['github']}"} Github
+      %li 
+        %a{:href => "https://www.linkedin.com/in/#{data['contact']['linkedin']}"} LinkedIn
+
+    %h3 EXPERIENCE
+    %ul
+      - data['experience'].each do |s|
+        %li
+          = s['company']
+          = s['title']
+          = s['from']
+          = s['to']
+          = s['desc']
+
+    %h3 EDUCATION
+    %ul
+      - data['education'].each do |s|
+        %li
+          = s['school']
+          - s['degree'].each do |d|
+            = d
+          = s['from']
+          = s['to']
+
+    %h3 SKILLS
+    %ul
+      - data['skills'].each do |s|
+        %li
+          - s.each do |k,v|
+            %span #{k.capitalize}: 
+            %ul
+              - v.each do |i|
+                %li #{i}
+

@@ -1,0 +1,116 @@
+name: Yoeun Pen
+title: "Developer / Designer / Technologist"
+download: resume.pdf
+contact:
+  email: yp@yoeun.com
+  twitter: yoeunp
+  github: yoeun
+  linkedin: yoeunp
+
+experience:
+  - company: Validas
+    title: Senior Technologist
+    from: Aug 2010
+    to: May 2013
+    desc: "Identified new technologies and trends and implemented those that will drive the growth and success of the company. Developed apps for the iPhone, Android, Silverlight and ASP.NET platforms. Full stack developer—UI, RESTful web service backend and database management. Lead efforts to automate Windows build and deployment using Go and rake."
+
+  - company: "Logos (Contractor, Direct Technology)"
+    title: Mac Developer
+    from: Feb 2010
+    to: Jul 2010
+    desc: "Helped to port the existing Windows application to the Macintosh platform. This job required knowledge and experience with both Windows technology (C#, WPF, XAML) and Mac technology (Objective C, Cocoa)."
+
+  - company: "Microsoft Corporation, Surface (Contractor, Sakson & Taylor)"
+    title: "Interactive Designer & Prototyper"
+    from: Nov 27 2007
+    to: Jan 13 2010
+    desc: "Developed interactive prototypes in Flash (AS3) and WPF that were used to explore and test new interaction models. Created XAML assets in Expression Blend and incorporated them into projects, which required in-depth knowledge of C#. Actively participated in interaction design critiques, discussions and brainstorms."
+
+  - company: Bullseye Creative
+    title: Lead Web Developer
+    from: Aug 25 2005
+    to: Aug 31 2007
+    desc: "Created custom CMS solutions for customers using PHP and MySQL. These CMS included features such as file upload, image resizing and cropping, AJAX and dynamically-generated PDF and Excel documents. Planned and developed all dynamic Flash X websites using reusable remoting components. Developed in PHP, Javascript, Actionscript, MySQL and CSS. Some ASP.NET."
+
+  - company: University of Washington
+    title: Web Developer
+    from: Mar 31 2003 
+    to: Jun 30 2005
+    desc: "Full responsibility for the redesign of the SAUF, HUB Reservations, SCC Reservations, SAO and RSO websites. Developed web applications using PHP and MySQL featuring events calendar, event reservation, login/access restriction and club registration."
+
+  - hide: true
+    company: The Boeing Company
+    title: IS Intern
+    from: 2001
+    to: 2003
+
+  - hide: true
+    company: The Boeing Company
+    title: Application Analyst
+    from: 2000
+    to: 2001
+
+education:
+  - school: University of Washington
+    degree: 
+      - Bachelor of Science in Biochemistry
+      - Bachelor of Science in ACMS (Applied Computational and Mathematical Sciences)
+    from: Sep 2000
+    to: Jun 2005
+
+skills:
+  - languages: 
+    - C#
+    - Objective C
+    - Javascript
+    - Ruby
+    - Java
+    - HTML
+    - CSS
+    - XAML
+    - Actionscript
+    - Python
+    - C++
+  - mobile: 
+    - iPhone
+    - iPad
+    - Android
+    - Windows Phone
+    - HTML5
+  - web: 
+    - Ruby on Rails
+    - Sinatra
+    - ASP.NET MVC
+    - Nancy
+    - REST
+    - jquery
+    - knockout
+    - bootstrap
+    - node.js
+    - socket.io
+    - express.js
+  - servers: 
+    - Apache
+    - nginx
+    - IIS
+    - Windows
+    - Linux
+    - CentOS
+    - Ubuntu
+    - OS X
+  - databases: 
+    - MS SQL
+    - MySQL
+    - Couchbase (NoSQL)
+  - cloud: 
+    - AWS
+    - EC2
+    - S3
+    - Route 53
+    - ELB
+  - automation: 
+    - Chef
+    - Go
+    - MSBuild
+    - Rake
+    - Albacore
