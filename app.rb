@@ -1,6 +1,8 @@
 require 'sinatra/base'
 
 class App < Sinatra::Base
+	set :public_folder, 'public'
+
   def initialize
     super()
   end

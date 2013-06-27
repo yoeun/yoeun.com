@@ -1,0 +1,8 @@
+body { font-family:Helvetica, Arial, sans-serif; font-size:14px; border-top:1em solid #39B54A; }
+a { color:#39B54A; text-decoration:underline; }
+ul { list-style: none; margin: 0; padding: 0;}
+h3.title { font-size:200%; color:#999999; font-weight: normal; margin-bottom:0.5em; margin-top:1em; }
+h4.title { margin: 0; }
+
+.school { font-weight: bold; }
+.category { font-weight: bold; }
