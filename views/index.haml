@@ -37,12 +37,15 @@
           %h3.title
             %img{src: "/img/hdr_experience.gif", width: "135", height: "20", alt:"EXPERIENCE", title:"Experience"}
           %ul
-            - data['experience'].each do |s|
+            - data['experience'].select{|i| i['hide'] != true}.each do |s|
               %li
                 %h4.title #{s['title']}: #{s['company']}
                 %span.date #{s['from']} to #{s['to']}
                 %p
                   =s['desc']
+          %h4.title.earlier Earlier:
+          %span 
+            = data['experience'].select{|i| i['hide'] == true}.collect {|i| "#{i['title']} at #{i['company']} (#{i['from']} to #{i['to']})" }.join(', ')
 
         .edu
           %h3.title

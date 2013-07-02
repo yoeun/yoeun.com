@@ -4,6 +4,7 @@ ul { list-style: none; margin: 0; padding: 0;}
 h1.name { margin: 0; }
 h3.title { font-size:200%; color:#999999; font-weight: normal; margin-bottom:0.5em; margin-top:0em; }
 h4.title { font-size: 1em; margin: 0; }
+h4.earlier { display: inline; }
 span.date { font-style: italic; }
 
 header { margin: 28px 0 0 0; }
