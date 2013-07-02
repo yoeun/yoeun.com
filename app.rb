@@ -9,7 +9,9 @@ class App < Sinatra::Base
 
   get '/' do
   	require 'yaml'
-		resume = YAML.load_file('data/resume.yml')
-    haml :index, :format => :html5, :locals => { :data => resume }
+  	filename = 'data/resume.yml'
+	resume = YAML.load_file(filename)
+	mtime = File.mtime(filename)
+    haml :index, format: :html5, locals: { data: resume, mtime: mtime }
   end
 end

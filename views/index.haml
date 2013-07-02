@@ -63,8 +63,8 @@
               %li
                 - s.each do |k,v|
                   %span.category #{k.capitalize}: 
-                  %span #{v.join(', ')}
+                  %span.skills #{v.join(', ')}
       %footer
-        Stuff
+        = "Last modified #{mtime.strftime('%d %b %Y')}"
     %script{src: "/bootstrap/js/bootstrap.js", language:"javascript"}
 
