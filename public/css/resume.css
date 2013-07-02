@@ -9,6 +9,7 @@ span.date { font-style: italic; }
 header { margin: 28px 0 0 0; }
 
 .school { font-weight: bold; }
-.category { font-weight: bold; clear: both; }
+span.category { font-weight: bold; clear: both; display:block; width:100px; float:left; }
+span.skills { float:left; }
 
 footer { clear: both; }
