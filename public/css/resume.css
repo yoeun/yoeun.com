@@ -1,8 +1,14 @@
 body { font-family:Helvetica, Arial, sans-serif; font-size:14px; border-top:1em solid #39B54A; }
 a { color:#39B54A; text-decoration:underline; }
 ul { list-style: none; margin: 0; padding: 0;}
-h3.title { font-size:200%; color:#999999; font-weight: normal; margin-bottom:0.5em; margin-top:1em; }
-h4.title { margin: 0; }
+h1.name { margin: 0; }
+h3.title { font-size:200%; color:#999999; font-weight: normal; margin-bottom:0.5em; margin-top:0em; }
+h4.title { font-size: 1em; margin: 0; }
+span.date { font-style: italic; }
+
+header { margin: 28px 0 0 0; }
 
 .school { font-weight: bold; }
-.category { font-weight: bold; }
+.category { font-weight: bold; clear: both; }
+
+footer { clear: both; }

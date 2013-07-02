@@ -8,51 +8,63 @@
     %link{href: "/css/resume.css", rel: "stylesheet"}
   %body
     %div
-      %h1.name #{data['name'].upcase}
-      %h3.title #{data['title'].upcase}
-      %a.download{href: data['download']} 
-        = "Download resume"
+      %header
+        %h1.name
+          %img{src: "/img/hdr_name.gif", width: "310", height: "60", alt:data['name'].upcase, title:data['name'].upcase}
+        %h3.title
+          %img{src: "/img/hdr_developer.gif", width: "130", height: "21", alt:"DEVELOPER", title:"Developer"}
+          %img{src: "/img/hdr_slash.gif", width: "21", height: "21", alt:"/" }
+          %img{src: "/img/hdr_designer.gif", width: "112", height: "21", alt:"DESIGNER", title:"Designer"}
+          %img{src: "/img/hdr_slash.gif", width: "21", height: "21", alt:"/" }
+          %img{src: "/img/hdr_technologist.gif", width: "180", height: "21", alt:"TECHNOLOGIST", title:"Technologist"}
+        %a.download{href: data['download']} 
+          = "Download resume"
 
-      .contact
-        %ul
-          %li 
-            %a{:href => "mailto:#{data['contact']['email']}"}
-              = data['contact']['email']
-          %li 
-            %a{:href => "https://twitter.com/#{data['contact']['twitter']}"} @#{data['contact']['twitter']}
-          %li 
-            %a{:href => "https://github.com/#{data['contact']['github']}"} Github
-          %li 
-            %a{:href => "https://www.linkedin.com/in/#{data['contact']['linkedin']}"} LinkedIn
+      %div.content
+        .contact
+          %ul
+            %li 
+              %a{:href => "mailto:#{data['contact']['email']}"}
+                = data['contact']['email']
+            %li 
+              %a{:href => "https://twitter.com/#{data['contact']['twitter']}"} @#{data['contact']['twitter']}
+            %li 
+              %a{:href => "https://github.com/#{data['contact']['github']}"} Github
+            %li 
+              %a{:href => "https://www.linkedin.com/in/#{data['contact']['linkedin']}"} LinkedIn
 
-      .exp
-        %h3.title EXPERIENCE
-        %ul
-          - data['experience'].each do |s|
-            %li
-              %h4.title #{s['title']}: #{s['company']}
-              %span #{s['from']} to #{s['to']}
-              %p
-                =s['desc']
+        .exp
+          %h3.title
+            %img{src: "/img/hdr_experience.gif", width: "135", height: "20", alt:"EXPERIENCE", title:"Experience"}
+          %ul
+            - data['experience'].each do |s|
+              %li
+                %h4.title #{s['title']}: #{s['company']}
+                %span.date #{s['from']} to #{s['to']}
+                %p
+                  =s['desc']
 
-      .edu
-        %h3.title EDUCATION
-        %ul
-          - data['education'].each do |s|
-            %li
-              %h4.title #{s['school']}
-              %span #{s['from']} to #{s['to']}
-              %p 
-                = s['degree'].join(', ')
+        .edu
+          %h3.title
+            %img{src: "/img/hdr_education.gif", width: "133", height: "20", alt:"EDUCATION", title:"Education"}
+          %ul
+            - data['education'].each do |s|
+              %li
+                %h4.title #{s['school']}
+                %span.date #{s['from']} to #{s['to']}
+                %p 
+                  = s['degree'].join(', ')
 
-      .skills
-        %h3.title SKILLS
-        %ul
-          - data['skills'].each do |s|
-            %li
-              - s.each do |k,v|
-                %span.category #{k.capitalize}: 
-                = v.join(', ')
-
+        .skills
+          %h3.title
+            %img{src: "/img/hdr_skills.gif", width: "70", height: "20", alt:"SKILLS", title:"Skills"}
+          %ul
+            - data['skills'].each do |s|
+              %li
+                - s.each do |k,v|
+                  %span.category #{k.capitalize}: 
+                  %span #{v.join(', ')}
+      %footer
+        Stuff
     %script{src: "/bootstrap/js/bootstrap.js", language:"javascript"}
 
