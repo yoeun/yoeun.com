@@ -1,6 +1,7 @@
 body { font-family:Helvetica, Arial, sans-serif; font-size:14px; border-top:1em solid #39B54A; }
 a { color:#39B54A; text-decoration:underline; }
 ul { list-style: none; margin: 0; padding: 0;}
+li { margin: 0; padding: 0; overflow: auto; }
 h1.name { margin: 0; }
 h3.title { font-size:200%; color:#999999; font-weight: normal; margin-bottom:0.5em; margin-top:0em; }
 h4.title { font-size: 1em; margin: 0; }
@@ -8,9 +9,16 @@ h4.earlier { display: inline; }
 span.date { font-style: italic; }
 
 header { margin: 28px 0 0 0; }
+div.main { max-width: 1000px; padding: 0 20px; margin: 0 auto; }
 
 .school { font-weight: bold; }
 span.category { font-weight: bold; clear: both; display:block; width:100px; float:left; }
-span.skills { float:left; }
+span.skills { float:left; display: block; width: auto; }
 
-footer { clear: both; }
+footer { clear: both; font-size: 12px; color: #999; padding: 20px 0 0 0; text-align: center; }
+
+@media (max-width: 767px) { 
+	div.main { padding: 0; }
+	span.category { float:none; }
+	span.skills { float:none; margin: 0 0 1em 0; }
+}

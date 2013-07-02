@@ -7,7 +7,7 @@
     %link{href: "/bootstrap/css/bootstrap-responsive.css", rel: "stylesheet"}
     %link{href: "/css/resume.css", rel: "stylesheet"}
   %body
-    %div
+    %div.main
       %header
         %h1.name
           %img{src: "/img/hdr_name.gif", width: "310", height: "60", alt:data['name'].upcase, title:data['name'].upcase}
@@ -67,7 +67,11 @@
                 - s.each do |k,v|
                   %span.category #{k.capitalize}: 
                   %span.skills #{v.join(', ')}
+
       %footer
+        = "&copy; #{DateTime.now.strftime('%Y')} Yoeun Pen. "
+        = "Fork me on <a href='https://github.com/yoeun/yoeun.com'>GitHub</a>. "
         = "Last modified #{mtime.strftime('%d %b %Y')}"
+
     %script{src: "/bootstrap/js/bootstrap.js", language:"javascript"}
 
