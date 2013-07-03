@@ -7,32 +7,41 @@
     %link{href: "/bootstrap/css/bootstrap-responsive.css", rel: "stylesheet"}
     %link{href: "/css/resume.css", rel: "stylesheet"}
   %body
-    %div.main
+    .main
       %header
         %h1.name
           %img{src: "/img/hdr_name.gif", width: "310", height: "60", alt:data['name'].upcase, title:data['name'].upcase}
-        %h3.title
-          %img{src: "/img/hdr_developer.gif", width: "130", height: "21", alt:"DEVELOPER", title:"Developer"}
-          %img{src: "/img/hdr_slash.gif", width: "21", height: "21", alt:"/" }
-          %img{src: "/img/hdr_designer.gif", width: "112", height: "21", alt:"DESIGNER", title:"Designer"}
-          %img{src: "/img/hdr_slash.gif", width: "21", height: "21", alt:"/" }
-          %img{src: "/img/hdr_technologist.gif", width: "180", height: "21", alt:"TECHNOLOGIST", title:"Technologist"}
-        %a.download{href: data['download']} 
-          = "Download resume"
 
-      %div.content
-        .contact
+        %h3.title
+          %img.developer{src: "/img/hdr_developer.gif", width: "130", height: "21", alt:"DEVELOPER", title:"Developer"}
+          %img{src: "/img/hdr_slash.gif", width: "21", height: "21", alt:"/" }
+          %img.designer{src: "/img/hdr_designer.gif", width: "112", height: "21", alt:"DESIGNER", title:"Designer"}
+          %img{src: "/img/hdr_slash.gif", width: "21", height: "21", alt:"/" }
+          %img.technologist{src: "/img/hdr_technologist.gif", width: "180", height: "21", alt:"TECHNOLOGIST", title:"Technologist"}
+
+        %hr.hidden-desktop
+
+        .contact        
           %ul
+            %li
+              %a{href: data['download']} 
+                %img{src: "/img/ico_pdf.gif", width: "32", height: "32", alt:"Download", title: "Download" }
             %li 
               %a{:href => "mailto:#{data['contact']['email']}"}
-                = data['contact']['email']
+                %img{src: "/img/ico_email2.gif", width: "32", height: "32", alt:"Email", title: "Email" }
             %li 
-              %a{:href => "https://twitter.com/#{data['contact']['twitter']}"} @#{data['contact']['twitter']}
+              %a{:href => "https://twitter.com/#{data['contact']['twitter']}"}
+                %img{src: "/img/ico_twitter.gif", width: "32", height: "32", alt:"Twitter", title: "Twitter" }
             %li 
-              %a{:href => "https://github.com/#{data['contact']['github']}"} Github
+              %a{:href => "https://github.com/#{data['contact']['github']}"}
+                %img{src: "/img/ico_github.gif", width: "32", height: "32", alt:"GitHub", title: "GitHub" }
             %li 
-              %a{:href => "https://www.linkedin.com/in/#{data['contact']['linkedin']}"} LinkedIn
+              %a{:href => "https://www.linkedin.com/in/#{data['contact']['linkedin']}"}
+                %img{src: "/img/ico_linkedin.gif", width: "32", height: "32", alt:"LinkedIn", title: "LinkedIn" }
 
+        %hr
+
+      .content
         .exp
           %h3.title
             %img{src: "/img/hdr_experience.gif", width: "135", height: "20", alt:"EXPERIENCE", title:"Experience"}

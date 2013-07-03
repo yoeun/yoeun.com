@@ -2,14 +2,19 @@ body { font-family:Helvetica, Arial, sans-serif; font-size:14px; border-top:1em 
 a { color:#39B54A; text-decoration:underline; }
 ul { list-style: none; margin: 0; padding: 0;}
 li { margin: 0; padding: 0; overflow: auto; }
-h1.name { margin: 0; }
-h3.title { font-size:200%; color:#999999; font-weight: normal; margin-bottom:0.5em; margin-top:0em; }
+h1.name { margin: 0 0 5px -5px; }
+h3.title { font-size:200%; color:#999999; font-weight: normal; margin: 0 0 0.5em 0; }
+header h3.title img { display: block; float: left; margin: 5px 0px; }
 h4.title { font-size: 1em; margin: 0; }
 h4.earlier { display: inline; }
 span.date { font-style: italic; }
 
 header { margin: 28px 0 0 0; }
 div.main { max-width: 1000px; padding: 0 20px; margin: 0 auto; }
+div.contact { width: 185px; float: right; margin: -20px 0 0 0; }
+div.contact li { display: inline-block; float: left; margin: 0 0 0 5px; }
+hr { clear: both; margin: 0; border-top: 1px solid #39B54A; }
+div.content { clear: both; }
 
 .school { font-weight: bold; }
 span.category { font-weight: bold; clear: both; display:block; width:100px; float:left; }
@@ -17,8 +22,25 @@ span.skills { float:left; display: block; width: auto; }
 
 footer { clear: both; font-size: 12px; color: #999; padding: 20px 0 0 0; text-align: center; }
 
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+ }
+ 
+/* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
 	div.main { padding: 0; }
+	div.contact { clear: both; float: none; width: auto; padding: 0 0 10px 0; margin: 10px 0 0 0;}
 	span.category { float:none; }
 	span.skills { float:none; margin: 0 0 1em 0; }
+	img.designer { clear: both; }
+	img.technologist { clear: both; }
+ }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
 }
