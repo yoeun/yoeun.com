@@ -4,14 +4,14 @@ ul { list-style: none; margin: 0; padding: 0;}
 li { margin: 0; padding: 0; overflow: auto; }
 h1.name { margin: 0 0 5px -5px; }
 h3.title { font-size:200%; color:#999999; font-weight: normal; margin: 0 0 0.5em 0; }
-header h3.title img { display: block; float: left; margin: 5px 0px; }
+header h3.title img { display: block; float: left; margin: 0.25em 0px; }
 h4.title { font-size: 1em; margin: 0; }
 h4.earlier { display: inline; }
 span.date { font-style: italic; }
 
-header { margin: 28px 0 0 0; }
+header { margin: 3em 0 2em 0; }
 div.main { max-width: 1000px; padding: 0 20px; margin: 0 auto; }
-div.contact { width: 185px; float: right; margin: -20px 0 0 0; }
+div.contact { width: 185px; float: right; margin: -1em 0 0 0; }
 div.contact li { display: inline-block; float: left; margin: 0 0 0 5px; }
 hr { clear: both; margin: 0; border-top: 1px solid #39B54A; }
 div.content { clear: both; }
@@ -33,8 +33,10 @@ footer { clear: both; font-size: 12px; color: #999; padding: 20px 0 0 0; text-al
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
+	h3.title { overflow: auto; margin: 0 0 0.25em 0; }
 	div.main { padding: 0; }
-	div.contact { clear: both; float: none; width: auto; padding: 0 0 10px 0; margin: 10px 0 0 0;}
+	div.contact { clear: both; float: none; width: auto; padding: 0 0 10px 0; margin: 10px 0 0 0; overflow: auto; }
+	div.contact li { margin: 0 5px 0 0; }
 	span.category { float:none; }
 	span.skills { float:none; margin: 0 0 1em 0; }
 	img.designer { clear: both; }
