@@ -5,7 +5,7 @@ require 'rspec/core/rake_task'
 port = 1981
 
 desc "Default task starts application"
-task :default => :start
+task :default => :restart
 
 desc "Start application"
 task :start do
@@ -21,6 +21,8 @@ task :stop do
     print "Stopping the application... "
     `thin stop -P #{pid}`
     print "Stopped\n"
+  else
+    puts "Application not running"
   end
 end
 
