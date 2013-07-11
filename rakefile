@@ -29,6 +29,26 @@ end
 desc "Restart application"
 task :restart => [:stop, :start]
 
+task :install do
+  # 0. Check if nginx installed
+  # 1. Copy config file in sites-available
+  # 2. Edit config file with appropriate values
+  # 3. Enable site by symlinking config file
+  # 4. Restart nginx
+  
+  unless which('nginx').nil?
+
+  end
+
+  # cp /etc/nginx/sites-available/default /etc/nginx/sites-available/myapp
+  # ln -s /etc/nginx/sites-available/myapp /etc/nginx/sites-enabled/myapp
+end
+
+task :remove do
+  # 1. Remove symlink from sites-enabled
+  # 2. Restart nginx
+end
+
 if !defined?(RSpec)
   puts "spec targets require RSpec"
 else
@@ -36,4 +56,15 @@ else
   RSpec::Core::RakeTask.new(:spec) do |t|
     t.rspec_opts = ['-cfs']
   end
+end
+
+def which(cmd)
+  exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
+  ENV['PATH'].split(File::PATH_SEPARATOR).each do |path|
+    exts.each { |ext|
+      exe = File.join(path, "#{cmd}#{ext}")
+      return exe if File.executable? exe
+    }
+  end
+  return nil
 end
